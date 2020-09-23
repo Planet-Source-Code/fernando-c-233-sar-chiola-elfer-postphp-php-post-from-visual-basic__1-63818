@@ -1,0 +1,17 @@
+<!-- VB WinSock --> 
+<?php 
+function Conectarse() 
+{ 
+   if (!($link=mysql_connect("localhost","wikilyric","4ji37j1p5o"))) 
+   { 
+      echo "Error conectando a la base de datos."; 
+      exit(); 
+   } 
+   if (!mysql_select_db("wikilyric_es_db",$link)) 
+   { 
+      echo "Error seleccionando la base de datos."; 
+      exit(); 
+   } 
+   return $link; 
+} 
+?>
